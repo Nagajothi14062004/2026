@@ -1,0 +1,74 @@
+1.string:
+	    Scanner sc=new Scanner(System.in
+	    String str=sc.next();
+		System.out.println(str);
+
+2.using nextline:
+     Scanner sc=new Scanner(System.in);
+	    String str=sc.nextLine();
+		System.out.println(str);
+
+3.int:
+    	 Scanner sc=new Scanner(System.in);
+	    int num=sc.nextInt();
+		System.out.println(num);
+
+4.short:
+        Scanner sc=new Scanner(System.in);
+	    Short num=sc.nextShort();
+		System.out.println(num);
+
+5.byte:
+     	Scanner sc=new Scanner(System.in);
+	    byte num=sc.nextByte();
+		System.out.println(num);
+
+6.float:
+
+ float num=sc.nextFloat();
+	System.out.println(num);
+
+7.long:
+ long num=sc.nextLong();
+		System.out.println(num);
+
+                                                                              COMPLETE PROGRAM:
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+// 	    String str=sc.next();
+// 		System.out.println(str);
+		
+
+	  
+	    //String str=sc.nextLine();
+		//System.out.println(str);
+		
+	
+	    //int num=sc.nextInt();
+		//System.out.println(num);
+		
+	
+     
+	    //Short num=sc.nextShort();
+		//System.out.println(num);
+		
+		
+	
+	    //byte num=sc.nextByte();
+		//System.out.println(num);
+		
+	
+	    //float num=sc.nextFloat();
+		//System.out.println(num);
+		
+// 	    long num=sc.nextLong();
+// 		System.out.println(num);
+		
+// 		 char str=sc.next().charAt(1);
+// 		System.out.println(str);
+				
+	}
+}
