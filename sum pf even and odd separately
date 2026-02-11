@@ -1,4 +1,4 @@
-import java.util.*;
+1.import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -19,3 +19,72 @@ public class Main {
      }
     }System.out.println(evensum+" "+oddsum);
 }  } 
+
+2.import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+     Scanner sc=new Scanner(System.in);
+     int size=sc.nextInt();
+     int arr[]=new int[size];
+     int oddsum=0,evensum=0;
+     for(int i=0;i<size;i++){
+       arr[i]=sc.nextInt();
+     }
+     for(int i=0;i<size;i++){
+     if(i%2==0){
+        evensum=evensum+arr[i];
+     }
+    else{
+      oddsum=oddsum+arr[i];
+      
+     }
+    }System.out.println(evensum+" "+oddsum);
+}  } 
+
+
+3.min of array:
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+     Scanner sc=new Scanner(System.in);
+     int size=sc.nextInt();
+     int arr[]=new int[size];
+     int oddsum=0,evensum=0;
+     for(int i=0;i<size;i++){
+       arr[i]=sc.nextInt();
+     }
+     int min=arr[0];
+     for(int i=1;i<size;i++){
+     if(arr[i]<min){
+       
+      min=arr[i];
+     }
+    }System.out.println(min);
+}  } 
+
+4.find max of second:
+    import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+     Scanner sc=new Scanner(System.in);
+     int size=sc.nextInt();
+     int arr[]=new int[size];
+     for(int i=0;i<size;i++){
+       arr[i]=sc.nextInt();
+     }
+     int firstmax=Integer.MIN_VALUE;
+     for(int i=1;i<size;i++){
+     if(arr[i]>firstmax){
+      firstmax=arr[i];
+     }}
+     int secondmax=Integer.MIN_VALUE;
+     for(int i=0;i<size;i++){
+     if(arr[i]>secondmax&&arr[i]<firstmax){
+       secondmax=arr[i];
+     }
+     }System.out.println(firstmax+" "+secondmax);
+    }
+}
