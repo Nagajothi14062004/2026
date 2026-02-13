@@ -1,0 +1,18 @@
+                                                                           string inbuild methods      
+                            //checking character types:
+1.character.isLetter('a')
+2.isLetter(char ch)
+3.isDigit(char ch)
+4.isLetterOrDigit(char ch)
+5.isWhitespace(char ch)
+6.isUppercase(char ch)
+7.isLowercase(char ch)
+
+                //character conversion:
+1.toUpperCase(char ch)
+2.toLowerCase(char ch)
+3.toTitleCase(char ch)
+
+
+                    //numeric value
+1.getNumericValue(char ch)
