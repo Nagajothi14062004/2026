@@ -126,4 +126,19 @@ EG:
 EG:
       String str="  innate talent  ";
       System.out.println(str.trim());
-   
+20.toString();
+    return the  value  of a string object(string)
+EG:
+21.startsWIth:
+       check whether a string starts with specified characters
+
+EG:
+
+22.substring:
+     return a new string which is the substring of a specified a string 
+EG:
+       String str="innate talent";
+       System.out.print(str.substring(3));
+        System.out.print(str.substring(3,7));
+23.toCharArray:
+        convert this string to anew character array
