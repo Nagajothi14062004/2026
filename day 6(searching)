@@ -1,0 +1,107 @@
+                                                                 LINEAR SEARCH
+//method 1:
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      int size=sc.nextInt();
+      int arr[]=new int[size];
+      for(int i=0;i<size;i++){
+        arr[i]=sc.nextInt();
+      }
+      int search=sc.nextInt();
+      boolean ind=false;
+      for(int i=0;i<size;i++){
+        if(arr[i]==search){
+           ind=true;
+           System.out.println("element present in position " + i);
+        }
+      }
+      if(ind=false){
+        System.out.println("no element present");
+      }
+     
+    }
+}
+
+//method2:reverse to frist:
+     import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      int size=sc.nextInt();
+      int arr[]=new int[size];
+      for(int i=0;i<size;i++){
+        arr[i]=sc.nextInt();
+      }
+      int search=sc.nextInt();
+      boolean ind=false;
+      int a=1;
+      for(int i=size-1;i>=0;i--,a++){
+        if(arr[i]==search){
+           ind=true;
+           System.out.println("element present in position " + a);
+        }
+      }
+      if(ind=false){
+        System.out.println("no element present");
+      }
+     
+    }
+}
+
+
+//method 3:by using posiiton from 1:
+  import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      int size=sc.nextInt();
+      int arr[]=new int[size];
+      for(int i=0;i<size;i++){
+        arr[i]=sc.nextInt();
+      }
+      int search=sc.nextInt();
+      boolean ind=false;
+      for(int i=size-1;i>=0;i--){
+        if(arr[i]==search){
+           ind=true;
+           //System.out.println( i+1+" element present in position " );
+        }
+      }
+      if(ind=false){
+        System.out.println("no element present");
+      }
+     
+    }
+}
+//method 4:only one element print:
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      int size=sc.nextInt();
+      int arr[]=new int[size];
+      for(int i=0;i<size;i++){
+        arr[i]=sc.nextInt();
+      }
+      int search=sc.nextInt();
+      boolean ind=false;
+      for(int i=size-1;i>=0;i--){
+        if(arr[i]==search){
+           ind=true;
+           System.out.println( i+1+" element present in position " );
+          break;
+          
+        }
+      }
+      if(ind=false){
+        System.out.println("no element present");
+      }
+     
+    }
+}
+
