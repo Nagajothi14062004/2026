@@ -1,0 +1,117 @@
+                                                                           object-//within class:
+    import java.util.*;
+
+public class main {
+  int reg;
+      String name;
+    public static void main(String[] args) {
+      main m1=new main();
+      m1.reg=101;
+      m1.name="arun";
+      main m2=new main();
+      m2.reg=102;
+      m2.name="priya";
+      System.out.println(m1.reg); 
+      System.out.println(m1.name);
+       System.out.println(m2.reg);
+        System.out.println(m2.name);
+    }
+}
+
+
+                                                                                //outside class:
+import java.util.*;
+class student{
+int reg;
+String name;
+}
+public class main {
+  
+    public static void main(String[] args) {
+      student m1=new student();
+      m1.reg=101;
+      m1.name="arun";
+      student m2=new student();
+      m2.reg=102;
+      m2.name="priya";
+      System.out.println(m1.reg); 
+      System.out.println(m1.name);
+      
+    }
+}
+
+                                                                          //object using method
+
+
+import java.util.*;
+class student{
+int reg;
+String name;
+ void assign(int r,String n){
+   reg=r;
+   name=n;
+ }
+ void print(){
+   System.out.println(reg+" "+name);
+ }
+}
+public class main {
+  
+    public static void main(String[] args) {
+      student m1=new student();
+      student m2=new student();
+     m1.assign(101,"arun");
+     m2.assign(102,"priya");
+      m1.print();
+      m2.print();
+    }
+}
+
+                                                                            //object using constructor 
+
+
+
+import java.util.*;
+class bike{
+  bike(){
+    System.out.println("bike is created");
+  }
+
+}
+public class main {
+  
+    public static void main(String[] args) {
+      bike b=new bike();
+   
+    }
+}
+
+
+                                                         //parameterized constructor(object)
+
+
+import java.util.*;
+class student{
+  int reg;
+  String name;
+   
+student(int r,String n){
+  reg=r;
+  name=n;
+}
+void display(){
+  System.out.println(reg+" "+name);
+}
+  
+
+}
+public class main {
+  
+    public static void main(String[] args) {
+     student m1=new student(101,"arun");
+     student m2=new student(102,"priya");
+     m1.display();
+     m2.display();
+   
+    }
+}
