@@ -1,0 +1,222 @@
+Methods:
+    set of codes for using code reusability
+
+Types of methods:
+     *predefined function
+     *userdefined function
+        !with argument with return type(min)
+        !with argument without return type(println)
+        !without argument with return type(length)
+        !without argument without return type
+definition:
+    public static/non static
+    return type-(single value or variable)/non return type-(void)
+
+//definition
+ public static int sum(int a,int b)//parameters{
+
+}
+sum();//method calling
+sum(10,20);//arguments
+
+
+//declaration
+public static int sum;
+                                                                          USERDEFINED FUNCTION           
+                                                                              PROGRAM:
+
+
+                                                                   1.//with argument with return type:
+import java.util.*;
+public class Main {
+  public static boolean prime(int z){
+    int count=0;
+    for(int i=1;i<=z;i++){
+      if(z%i==0){
+        count++;
+      }
+    }
+    if(count==2){
+      return true;
+    }
+    else{
+      return false;
+    }
+  }
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      int num=sc.nextInt();
+      System.out.println(prime(num));
+    }
+}
+                                                                2.//with argument without return type:(static)
+
+import java.util.*;
+public class Main {
+  public static void prime(int z){
+    int count=0;
+    for(int i=1;i<=z;i++){
+      if(z%i==0){
+        count++;
+      }
+    }
+    if(count==2){
+      System.out.println(true);
+    }
+    else{
+      System.out.println(false);
+    }
+  }
+
+  
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      int num=sc.nextInt();
+      prime(num);
+    }
+}
+
+
+                                                          2.//with argument without return type(non static)
+
+
+
+import java.util.*;
+public class Main {
+  public  void prime(int z){
+    int count=0;
+    for(int i=1;i<=z;i++){
+      if(z%i==0){
+        count++;
+      }
+    }
+    if(count==2){
+      System.out.println(true);
+    }
+    else{
+      System.out.println(false);
+    }
+  }
+
+  
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      Main m=new Main();
+      int num=sc.nextInt();
+      m.prime(num);
+    }
+}
+
+                                                     3.//without argument with return type
+
+
+import java.util.*;
+public class Main {
+  public static boolean prime(){
+   Scanner sc=new Scanner(System.in);
+    int z=sc.nextInt();
+    int count=0;
+    for(int i=1;i<=z;i++){
+      if(z%i==0){
+        count++;
+      }
+    }
+    if(count==2){
+      return true;
+    }
+    else{
+      return false;
+    }
+  }
+
+  
+    public static void main(String[] args) {
+     System.out.println(prime());
+     System.out.println(prime());
+    }
+}
+
+
+      
+                                                          4.//without argument withour argument
+
+
+import java.util.*;
+public class Main {
+  public static void prime(){
+   Scanner sc=new Scanner(System.in);
+    int z=sc.nextInt();
+    int count=0;
+    for(int i=1;i<=z;i++){
+      if(z%i==0){
+        count++;
+      }
+    }
+    if(count==2){
+      System.out.println(true);
+    }
+    else{
+      System.out.println(false);
+    }
+  }
+    public static void main(String[] args) {
+      prime();
+    }
+}
+
+
+      
+
+
+
+      
+      extra:
+      import java.util.*;
+public class Main {
+  public static boolean prime(int a){
+    int count=0;
+    for(int i=1;i<=a;i++){
+    if(a%i==0){
+      count++;
+    }
+    }
+    if(count==2){
+      return true;
+    }
+    else{
+      return false;
+    }
+ 
+  }
+  public static boolean reverse(int a){
+    int rev=0;
+    while(a>0){
+      int r=a%10;
+      rev=rev*10+r;
+      a=a/10;
+    }
+    return rev;
+  }
+  }
+    
+    public static void main(String[] args){
+      Scanner sc=new Scanner(System.in);
+      int num=sc.nextInt();
+     if(prime(num)==true){
+       int rev=reverse(num);
+       if(prime(rev)==true)
+       System.out.println("twisted");
+     }else{
+         System.out.println(" not a twisted prime");
+     }
+    }
+     else{
+       System.out.println(" not a prime");
+     }
+    
+    }
+}
+   
+
+
+      
