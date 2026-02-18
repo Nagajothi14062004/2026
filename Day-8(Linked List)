@@ -541,5 +541,103 @@ deletion link:
                                                                           //DOUBLY LINKED LIST
 
 
+class Node{
+    Node prev;
+    int data;
+    Node next;
+    
+    Node(int data){
+        prev=null;
+        this.data=data;
+        next=null;
+    }
+}
+class Doublylinkedlist{
+    Node head=null;
+    Node tail=null;
+    int size=0;
+    
+    void addatlast(int data){
+      size++;
+        Node newnode = new Node(data);
+        if(head==null){
+            head=tail=newnode;
+        }
+        else{
+            newnode.prev=tail;
+            tail.next=newnode;
+            tail=newnode;
+        }
+    }
+    void addatbeg(int data){
+      size++;
+      Node newnode=new Node(data);
+      if(head==null){
+        head=tail=newnode;
+      }
+      else{
+        newnode.next=head;
+        head.prev=newnode;
+			head=newnode;
+      }
+      
+    }
+	void addatpos(int data,int pos) {
+	  size++;
+		if(pos<=0 || pos>size+1) {
+			System.out.println("please enter a valid pos");
+			return;
+		}
+		if(pos==1) {
+			addatbeg(data);
+			return;
+		}
+		if(pos==size+1) {
+			addatlast(data);
+			return;
+		}
+		Node newnode = new Node(data);
+		if(head==null) {
+			head=tail=newnode;
+		}
+		else {
+			Node temp=head;
+			for(int i=1; i<pos-1; i++) {
+				temp=temp.next;
+			}
+		newnode.next = temp.next;
+    newnode.prev = temp;
+    temp.next.prev = newnode;
+    temp.next = newnode;
 
+  
+}
+	}
+	
+	
+	void display() {
+		Node temp = tail;
+		while(temp!=null) {
+			System.out.print(temp.data+" ");
+			temp = temp.prev;
+		}
+		System.out.println();
+	}
+    
+    
+}
+
+public class Main
+{
+	public static void main(String[] args) {
+	Doublylinkedlist d = new Doublylinkedlist();
+	d.addatlast(100);
+	d.display();
+	d.addatbeg(200);
+	d.display();
+	d.addatpos(300,2);
+	d.display();
+	
+	}
+}
 `
