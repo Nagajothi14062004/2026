@@ -1,5 +1,10 @@
                                                                       //SINGLY LINKED LIST
 
+REAL TIME EXAMPLES:
+        INSER AT LAST-              //ATM TRANSACTION
+        INSERT AT ANY POSITION-    //TICKET TRAIN BOOKING
+        INSERT AT BEG-             //GALLERY
+
                                                                               //PROGRAM:(ASSIGN VALUES)
 import java.util.*;
 class java{
@@ -100,7 +105,7 @@ class singlylinkedlist{
   Node tail=null;
   int size=0;
   
-  void add(int data){
+  void add(int data){    //(INSERTION AT END -REAL TIME EXAMPLE-BANK TRANSACTION)
     size++;
     Node newnode=new Node(data);
     if(head==null){
@@ -640,4 +645,159 @@ public class Main
 	
 	}
 }
-`
+                                                                //deleteatlast
+
+class Node{
+    Node prev;
+    int data;
+    Node next;
+    
+    Node(int data){
+        prev=null;
+        this.data=data;
+        next=null;
+    }
+}
+class Doublylinkedlist{
+    Node head=null;
+    Node tail=null;
+    int size=0;
+    
+    void addatlast(int data){
+      size++;
+        Node newnode = new Node(data);
+        if(head==null){
+            head=tail=newnode;
+        }
+        else{
+            newnode.prev=tail;
+            tail.next=newnode;
+            tail=newnode;
+        }
+    }
+   void deleteatlast(){
+     if(head==null){
+       System.out.println("ther is no element to delete");
+       return;
+     }
+     if(head==tail){
+       head=tail=null;
+       System.out.println("all element deleted");
+       
+     }else{
+       tail=tail.prev;
+       tail.next=null;
+     }
+       size--;
+     
+   }
+	
+	void display() {
+	  if(head==null){
+	    System.out.println("there is no element to delete");
+	  }
+		Node temp = head;
+		while(temp!=null) {
+			System.out.print(temp.data+" ");
+			temp = temp.next;
+		}
+		System.out.println();
+	}
+    
+    
+}
+
+public class Main
+{
+  
+	public static void main(String[] args) {
+	Doublylinkedlist d = new Doublylinkedlist();
+	d.addatlast(100);
+	d.addatlast(200);
+	d.addatlast(300);
+	d.display();
+	d.deleteatlast();
+	d.display();
+	d.deleteatlast();
+	d.display();
+	d.deleteatlast();
+	d.display();
+	
+	}
+}
+
+
+                                                                        //delete atbeg
+
+class Node{
+    Node prev;
+    int data;
+    Node next;
+    
+    Node(int data){
+        prev=null;
+        this.data=data;
+        next=null;
+    }
+}
+class Doublylinkedlist{
+    Node head=null;
+    Node tail=null;
+    int size=0;
+    
+    void addatlast(int data){
+      size++;
+        Node newnode = new Node(data);
+        if(head==null){
+            head=tail=newnode;
+        }
+        else{
+            newnode.prev=tail;
+            tail.next=newnode;
+            tail=newnode;
+        }
+    }
+   void deleteatbeg(){
+     if(head==null){
+       System.out.println("ther is no element to delete");
+       return;
+     }
+     if(head==tail){
+       head=tail=null;
+       System.out.println("all element deleted");
+     }
+     else{
+       head=head.next;
+       head.prev=null;
+     }
+   }
+	
+	void display() {
+	  if(head==null){
+	    System.out.println("there is no element to delete");
+	  }
+		Node temp = head;
+		while(temp!=null) {
+			System.out.print(temp.data+" ");
+			temp = temp.next;
+		}
+		System.out.println();
+	}
+}
+public class Main
+{
+	public static void main(String[] args) {
+	Doublylinkedlist d = new Doublylinkedlist();
+	d.addatlast(100);
+	d.addatlast(200);
+	d.addatlast(300);
+	d.display();
+	d.deleteatbeg();
+	d.display();
+
+	}
+}
+
+
+
+
