@@ -1,0 +1,39 @@
+//TREE:
+ In order to perform linear operation the time complexity increases beacause the data is in sequential manner ,so  we can move into non linear data structure (tree)
+
+
+                                                    //BINARY TREE(NODE CREATION)
+   class Node{
+    int data;
+    Node left;
+    Node right;
+    
+    Node(int data){
+        this.data=data;
+        left=null;
+        right=null;
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+       Node root=new Node(10);
+       Node n1=new Node(20);
+       root.left=n1;
+       Node n2=new Node(30);
+       root.right=n2;
+       Node n3=new Node(40);
+       root.left.left=n3;
+      Node n4=new Node(50);
+       root.right.left=n4;
+        Node n5=new Node(60);
+       root.right.right=n5;
+       System.out.print(root.data+" "+root.left.data+" "+root.right.data);
+       
+    }
+}
+
+
+
+
+   
+   
